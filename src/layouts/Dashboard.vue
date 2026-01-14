@@ -5,7 +5,7 @@
             <Sidebar />
         </div>
 
-        <main class="flex-grow-1 p-4">
+        <main class="flex-grow-1 p-2 p-md-4">
             <div class="container-fluid">
                 <div class="row d-block d-md-none">
                     <ul class="nav nav-pills d-flex mb-auto">

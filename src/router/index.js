@@ -8,6 +8,9 @@ import Items from '../pages/Items.vue'
 import Customers from '../pages/Customer.vue'
 import Invoices from '../pages/Invoice.vue'
 
+import CreateInvoice from '../pages/CreateInvoice.vue';
+import ViewInvoice from '../pages/ViewInvoice.vue';
+
 const routes = [
     { path: '/', component: Landing },
     { path: '/about', component: AboutView },
@@ -17,7 +20,9 @@ const routes = [
         children: [
             { path: '', component: Items },
             { path: 'customers', component: Customers },
-            { path: 'invoices', component: Invoices }
+            { path: 'invoices', component: Invoices },
+            { path: 'invoices/create', component: CreateInvoice },
+            { path: 'invoices/view/:id', component: ViewInvoice },
         ]
     }
 ];

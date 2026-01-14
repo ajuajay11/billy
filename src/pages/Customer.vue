@@ -39,7 +39,7 @@
 
             <!-- Submit Button -->
             <div class="col-md-2">
-              <button type="submit" class="boton-elegante w-100 h-100 d-flex justify-content-center align-items-center">
+              <button type="submit" class="btn btn-dark w-100 py-3 fw-bold shadow-sm h-100">
                 ADD
               </button>
             </div>

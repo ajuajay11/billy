@@ -46,6 +46,16 @@ export const getInvoice = async () => {
     }
 };
 
+export const getInvoiceById = async (id) => {
+    try {
+        const response = await axios.get(`${API_BASE_URL}/invoice/?id=${id}`);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching invoice by id:', error);
+        throw error;
+    }
+};
+
 export const submitInvoice = async (item) => {
     try {
         const response = await axios.post(`${API_BASE_URL}/invoice`,

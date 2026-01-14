@@ -60,8 +60,8 @@
                 <td class="ps-4 fw-medium">{{ item.name }}</td>
                 <td class="text-end pe-4 font-monospace fw-bold text-dark">
                   {{ formatCurrency(item.price) }}
-                  <button @click="deleteItem(item._id)" class="bg-transparent border-0"><i
-                      class="text-danger bi bi-trash2"></i></button>
+                  <!-- <button @click="deleteItem(item._id)" class="bg-transparent border-0"><i
+                      class="text-danger bi bi-trash2"></i></button> -->
                 </td>
 
               </tr>

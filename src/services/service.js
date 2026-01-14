@@ -13,7 +13,17 @@ export const getItemsOrCutomers = async (type) => {
     }
 };
 
-export const addItemsOrCutomers = async (type,item) => {
+export const deleteItemsOrCutomers = async (type, id) => {
+    try {
+        const response = await axios.delete(`${API_BASE_URL}/${type}/${id}`);
+        return response.data;
+    } catch (error) {
+        console.error('Error deleting user:', error);
+        throw error;
+    }
+};
+
+export const addItemsOrCutomers = async (type, item) => {
     try {
         const response = await axios.post(`${API_BASE_URL}/${type}`,
             item);
@@ -23,15 +33,15 @@ export const addItemsOrCutomers = async (type,item) => {
         throw error;
     }
 };
- 
+
 
 
 export const getInvoice = async () => {
     try {
-        const response = await axios.post(`${API_BASE_URL}/invoice`);
+        const response = await axios.get(`${API_BASE_URL}/invoice`);
         return response.data;
     } catch (error) {
-        console.error('Error fetching user data:', error);
+        console.error('Error fetching invoices:', error);
         throw error;
     }
 };
@@ -46,4 +56,3 @@ export const submitInvoice = async (item) => {
         throw error;
     }
 };
- 

@@ -1,14 +1,14 @@
 <template>
-  <main>
+  <div id="app-container">
     <Preloader />
     <router-view />
-  </main>
+  </div>
 </template>
 
 <script setup>
+import { onMounted, onUnmounted } from 'vue';
 import Lenis from 'lenis';
 import Preloader from './components/Preloader.vue';
-import { onMounted, onUnmounted } from 'vue';
 
 let lenis = null;
 
@@ -16,12 +16,10 @@ onMounted(() => {
   lenis = new Lenis({
     autoRaf: true,
   });
-  
-  // Make it globally accessible if needed
   window.lenis = lenis;
 });
+
 onUnmounted(() => {
   lenis?.destroy();
 });
-
 </script>
